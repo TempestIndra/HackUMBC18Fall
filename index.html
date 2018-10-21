@@ -26,24 +26,30 @@
   <body>
     <div class="container">
       <div class="form-signin text-center">
+		  <div id ="tohide" class =""></div>
         <h2>AirCrack GUI</h2>
         <label for="txtEmail" class="sr-only">Email address</label>
         <input id="txtEmail" type="email" class="form-control" placeholder="Email address" required autofocus>
         <!-- Password label and input element -->
         <label for="txtPassword" class="sr-only">Password</label>
         <input id="txtPassword" type="password" class="form-control" placeholder="Password" required>
-        <div class="checkbox">
+<!--        <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Remember me
           </label>
-        </div>
+        </div> -->
         <button id="btnLogin" class="btn btn-lg btn-primary btn-block">Log in</button>
-        <button id="btnSignup" class="btn btn-lg btn-success btn-block">Sign up</button>
+<!--        <button id="btnSignup" class="btn btn-lg btn-success btn-block">Sign up</button>-->
+		</div>
         <button id="btnLogout" class="btn btn-lg btn-danger btn-block hide">Log out</button>
+		  
       </div>
-    
-	 <div class ="  hide " id="texts">
-		<p>Send Help <br> I have no idea what im doing</p>
+ 
+	 <div id="texts" class ="  hide  container text-center" >
+		<h1>We have idea of what we doing </h1>
+		<h2>you should enalbe it fist</h2>
+		<input type="button" onclick="disableUser()" value="Disable"> 
+		<input type="button" onclick="enableUser()" value="Enable">
 		<p>Data from Raspberry Pi</p>
 		<table width="200" border="1">
 	  		<tbody>
@@ -60,12 +66,10 @@
 				</tr>
 	  		</tbody>
 		</table>
-		<input type="button" onclick="disableUser()" value="Disable"> 
-		<input type="button" onclick="enableUser()" value="Enable">
+		<input id="enableButton" type="button" onclick="disableUser()" value="Disable"> 
+		<input id="disableButton"type="button" onclick="enableUser()" value="Enable">
 	 </div> 
 		
-	 </div>
-	  
 	  
     <script src="app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
@@ -80,6 +84,16 @@
 		messagingSenderId: "398311049534"
 	  };
 	  firebase.initializeApp(config);
+	</script>
+	<script>
+		function disableUser()
+		{
+			
+		}
+		function enableUser()
+		{
+			
+		}
 	</script>
 
   </body>

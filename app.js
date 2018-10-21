@@ -37,22 +37,22 @@
   	txtPassword.value = "";
   })
 
-  // Add signup event, with callback function e.
-  btnSignup.addEventListener("click", e => {
-  	// Get email and password values.
-  	var email = txtEmail.value;
-  	var password = txtPassword.value;
-  	// Store Firebase authentication namespace.
-  	var auth = firebase.auth();
-  	// Sign in user using Firebase Authentication methods.
-  	var promise = auth.createUserWithEmailAndPassword(email, password);
-  	// Use the promise to resolve the user,
-  	// or catch any errors that occur and log them to console.
-  	promise.catch(e => console.log(e.message));
-  	// Clear the email and password input fields.
-  	txtEmail.value = "";
-  	txtPassword.value = "";
-  });
+//  // Add signup event, with callback function e.
+//  btnSignup.addEventListener("click", e => {
+//  	// Get email and password values.
+//  	var email = txtEmail.value;
+//  	var password = txtPassword.value;
+//  	// Store Firebase authentication namespace.
+//  	var auth = firebase.auth();
+//  	// Sign in user using Firebase Authentication methods.
+//  	var promise = auth.createUserWithEmailAndPassword(email, password);
+//  	// Use the promise to resolve the user,
+//  	// or catch any errors that occur x`and log them to console.
+//  	promise.catch(e => console.log(e.message));
+//  	// Clear the email and password input fields.
+//  	txtEmail.value = "";
+//  	txtPassword.value = "";
+//  });
 
   // Add logout event, with callback function e.
   btnLogout.addEventListener("click", e => {
@@ -68,6 +68,7 @@
   	{
   		console.log("Logged in as: " + firebaseUser["email"]);
   		console.log(firebaseUser);
+		tohide.classList.remove("hide");
   		btnLogout.classList.remove("hide");
 		texts.classList.remove("hide");		
   	}
@@ -76,6 +77,7 @@
   	{
   		console.log("Not logged in.")
   		btnLogout.classList.add("hide");
+		tohide.classList.add("hide");
 		texts.classList.add("hide");
 
   	}
